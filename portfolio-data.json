@@ -1,0 +1,294 @@
+{
+  "siteTitle": "Siddharth Mahajan | Solution Architect & Cloud Engineer",
+  "personal": {
+    "name": "Siddharth Mahajan",
+    "title": "Solution Architect & Cloud Engineer",
+    "subtitle": "Kubernetes | Full-Stack | Software Architecture | AI Assistance",
+    "location": "India",
+    "email": "siddharth.mhjn99@gmail.com",
+    "availableForWork": true,
+    "availabilityText": "Available for work",
+    "availability": "Available for Technical Consulting",
+    "yearsExperience": "3+",
+    "projectsCompleted": "5+",
+    "resume": "assets/docs/resume.pdf",
+    "googleScriptURL": "https://script.google.com/macros/s/AKfycbyc-yv-4Jipny7F-WetD9fj1J4NvYyC7SQpeJ7rvkv4PUr5L3sEVARgcxkWR8WIo3pL/exec",
+    "heroSkills": ["Kubernetes", "Spring Boot", "AI Assistance", "Architecture"],
+    "socialLinks": [
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/siddharth-mhjn",
+        "icon": "fa-brands fa-linkedin"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/siddharth-mhjn",
+        "icon": "fa-brands fa-github"
+      },
+      {
+        "name": "Email",
+        "url": "mailto:siddharth.mhjn99@gmail.com",
+        "icon": "fa-solid fa-envelope"
+      }
+    ]
+  },
+  "about": {
+    "description": [
+      "Cloud Engineer, Full-Stack Developer, and Software Architect with expertise in building scalable, secure cloud-native systems.",
+      "Skilled in Kubernetes, Istio, Spring Boot, Spring Cloud, Keycloak, and observability tools like OpenSearch, Prometheus, and Grafana.",
+      "Experienced in designing API Gateways, automating infrastructure, and building real-time data pipelines across enterprise environments.",
+      "Passionate about mentoring teams, evaluating emerging technologies, and aligning architecture with business goals."
+    ],
+    "currentRole": {
+      "title": "Software Engineer I",
+      "company": "Astreya",
+      "period": "June 2025 – Present"
+    },
+    "specialization": "Cloud Engineering, Full-Stack Development & Software Architecture",
+    "focusAreas": "Kubernetes, API Gateway, Observability, Multi-Tenant Auth, Data Pipelines"
+  },
+  "skills": {
+    "Cloud, Platform & Container Engineering": {
+      "icon": "fa-solid fa-cloud",
+      "color": "neon-cyan",
+      "technologies": [
+        "Docker", "Podman", "Kubernetes", "Rancher", "Istio",
+        "Azure", "AKS", "AWS (Basic)", "VMware",
+        "Service Mesh", "Nginx", "Linux", "Windows"
+      ]
+    },
+    "Programming, Scripting & Automation": {
+      "icon": "fa-solid fa-code",
+      "color": "neon-violet",
+      "technologies": [
+        "Java", "C", "C++", "Python",
+        "Shell", "PowerShell",
+        "Automation Scripting",
+        "Git", "GitHub", "CI/CD",
+        "Wireframing"
+      ]
+    },
+    "Application, Web & AI-Enabled Development": {
+      "icon": "fa-solid fa-layer-group",
+      "color": "neon-blue",
+      "technologies": [
+        "Spring Boot", "Spring Cloud", "Spring Security",
+        "Vue.js", "Quasar",
+        "HTML", "CSS",
+        "Claude AI", "Cursor IDE",
+        "LLM-Assisted Development",
+        "Prompt Engineering",
+        "AI-Driven Debugging & Optimization"
+      ]
+    },
+    "Data Platforms, Observability & API Security": {
+      "icon": "fa-solid fa-database",
+      "color": "cyan-500",
+      "technologies": [
+        "MySQL", "PostgreSQL", "OpenSearch",
+        "Prometheus", "Grafana",
+        "Kafka", "Apache NiFi",
+        "APISIX", "WSO2 API Gateway", "Keycloak",
+        "AI-Enhanced Development Workflows",
+        "Intelligent Code Refactoring"
+      ]
+    }
+  },
+  "skillStats": [
+    { "value": "10+", "label": "Cloud, Platform & DevOps Technologies", "color": "neon-cyan" },
+    { "value": "5+", "label": "Programming & Automation Languages", "color": "neon-violet" },
+    { "value": "10+", "label": "Application, Web & AI Development Tools", "color": "neon-blue" }
+  ],
+  "experience": [
+    {
+      "title": "Software Engineer I",
+      "company": "Astreya",
+      "period": "June 2025 – Present",
+      "isCurrent": true,
+      "color": "neon-cyan",
+      "logo": "https://cdn.brandfetch.io/id1iVW1Ptm/w/820/h/218/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B",
+      "responsibilities": [
+        "Developed a reactive API Gateway with Spring Cloud Gateway, enabling dynamic routing and zero-downtime configuration updates.",
+        "Implemented multi-tenant authentication with Keycloak and OAuth2 across distributed Kubernetes environments.",
+        "Set up centralized logging with OpenSearch and unified API documentation using Swagger/OpenAPI.",
+        "Led R&D on authentication strategies and contributed to architecture and IP planning decisions.",
+        "Adopted AI-assisted development (Claude) for code review, debugging, and accelerating R&D cycles, improving development efficiency and code quality."
+      ],
+      "technologies": ["Spring Cloud Gateway", "Keycloak", "Kubernetes", "OpenSearch", "OAuth2"]
+    },
+    {
+      "title": "Member Technical Staff",
+      "company": "NEC India",
+      "period": "April 2025 – June 2025",
+      "isCurrent": false,
+      "color": "neon-violet",
+      "logo": "https://www.logo.wine/a/logo/NEC/NEC-Logo.wine.svg",
+      "responsibilities": [
+        "Built 4+ real-time data pipelines for smart city projects, enabling unified data flow and faster decision-making.",
+        "Deployed EFK logging with Istio on Kubernetes, cutting root cause analysis time by 50% and reducing service interruptions by 30%.",
+        "Enhanced platform architecture to onboard 5+ vendors, improving scalability and ecosystem interoperability."
+      ],
+      "technologies": ["Kubernetes", "EFK", "Istio", "NiFi"]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "LTIMindtree",
+      "period": "July 2022 – March 2025",
+      "isCurrent": false,
+      "color": "neon-blue",
+      "logo": "https://brandlogos.net/wp-content/uploads/2025/03/mindtree-logo_brandlogos.net_u5gci.png",
+      "responsibilities": [
+        "Managed 5+ enterprise Kubernetes clusters with Istio service mesh, achieving 80% traceability for an AIOps platform.",
+        "Built a custom API Gateway and operated a telemetry platform processing terabytes of monitoring data.",
+        "Evaluated 5+ cloud-native tools across service mesh, orchestration, and API management to drive architecture decisions.",
+        "Automated infrastructure with 10+ Bash/Python scripts, improving provisioning efficiency by 20%, and mentored team members."
+      ],
+      "technologies": ["Kubernetes", "Service Mesh", "API Gateway", "Spring Cloud"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "project1",
+      "title": "Protofolio_",
+      "description": "A collection of 6 professionally designed portfolio templates with a retro terminal-style landing page.",
+      "image": "https://protofolio.siddharthmhjn.com/resources/protofolio-logo.png",
+      "color": "neon-blue",
+      "gradient": "from-neon-blue to-blue-600",
+      "technologies": ["HTML", "Tailwind CSS", "JavaScript", "JSON"],
+      "problem": "Finding a good-looking, ready-to-use portfolio template is time-consuming and most options need heavy customization or coding knowledge.",
+      "solution": "Created Protofolio, a curated set of 6 portfolio templates that users can browse via a retro terminal landing page, pick a style, and customize content through a simple JSON file.",
+      "architecture": [
+        "Retro terminal-style landing page with live iframe previews",
+        "6 templates: Clean Minimalist, Bento, Retro Gaming, Illustrative UI, Modern SaaS, Digital Nebula",
+        "JSON-based content management for all templates",
+        "Google Apps Script integration for contact forms",
+        "Custom themed 404 and 405 error pages"
+      ],
+      "impact": [
+        "6 unique, fully responsive portfolio templates",
+        "Edit one JSON file to update all content - no coding needed",
+        "SEO optimized with meta tags and semantic HTML",
+        "Works on any static hosting - GitHub Pages, Netlify, Vercel"
+      ],
+      "link": "https://protofolio.siddharthmhjn.com",
+      "popupDisabled": false
+    },
+    {
+      "id": "project2",
+      "title": "API Gateway Solution",
+      "description": "Scalable API gateway with rate limiting, authentication, and analytics dashboard.",
+      "image": "",
+      "color": "neon-violet",
+      "gradient": "from-neon-violet to-purple-600",
+      "technologies": ["APISIX", "Keycloak", "Docker"],
+      "problem": "Microservices architecture lacked centralized API management, leading to security vulnerabilities, inconsistent authentication, and difficulty in monitoring API usage.",
+      "solution": "Built a custom API Gateway using APISIX with Keycloak integration for authentication, comprehensive rate limiting, and real-time analytics dashboard.",
+      "architecture": [
+        "APISIX as API Gateway with custom plugins",
+        "Keycloak for centralized authentication and authorization",
+        "Redis for rate limiting and caching",
+        "Real-time analytics with custom dashboard",
+        "Automated API documentation generation"
+      ],
+      "impact": [
+        "Reduced API response time by 35%",
+        "Prevented 10,000+ unauthorized access attempts",
+        "Improved API discoverability by 50%",
+        "Decreased security incidents by 70%"
+      ],
+      "link": "",
+      "popupDisabled": true
+    }
+  ],
+  "certifications": [
+    {
+      "title": "ITOPS Automation Engineer",
+      "level": "Foundation Level",
+      "issuer": "LTIMindtree",
+      "icon": "fa-solid fa-certificate",
+      "color": "neon-cyan"
+    },
+    {
+      "title": "Cloud & Infrastructure Service",
+      "level": "Professional Certification",
+      "issuer": "LTI",
+      "icon": "fa-solid fa-cloud",
+      "color": "neon-violet"
+    },
+    {
+      "title": "Web Development",
+      "level": "Full-Stack Development",
+      "issuer": "Internshala",
+      "icon": "fa-solid fa-code",
+      "color": "neon-blue"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Technical Subject Matter Expert",
+      "date": "June 2024",
+      "description": "Appreciated as a Technical Subject Matter Expert for contributions to the Automation Academy training program from April 2023 to March 2024.",
+      "authorization": "LTIMindtree",
+      "icon": "fa-solid fa-trophy",
+      "color": "neon-cyan"
+    },
+    {
+      "title": "Spotlight Award",
+      "date": "June 2023",
+      "description": "Honored for pioneering advanced technologies and implementing a robust Service Mesh architecture, leading to a 30% improvement in system scalability.",
+      "authorization": "LTIMindtree",
+      "icon": "fa-solid fa-award",
+      "color": "neon-violet"
+    },
+    {
+      "title": "Spotlight Award",
+      "date": "March 2023",
+      "description": "Recognized for rapidly mastering Platform (JORITZ) Core and Istio; delivered a live Service Mesh demo that influenced architectural direction, reducing decision-making time by 30%.",
+      "authorization": "LTIMindtree",
+      "icon": "fa-solid fa-star",
+      "color": "neon-blue"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Karthik Battaram",
+      "role": "Senior Data Engineer",
+      "company": "LTIMindtree",
+      "image": "https://media.licdn.com/dms/image/v2/D5603AQFr1PpRelbMfw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1721402399725?e=1772064000&v=beta&t=hYc7p2csvG1gm-6qNWkYHE3dmwPCQhDAivdU9adVFlU",
+      "quote": "I've had the pleasure of working closely with Siddharth and can confidently say he is one of the most technically sound and dependable engineers I’ve worked with. What truly sets him apart is his strong sense of ownership — once he takes on a task, he sees it through with focus, accountability, and a clear understanding of the bigger picture.",
+      "rating": 0
+    },
+    {
+      "name": "Akshay Reddy Emmadi",
+      "role": "Software Engineer",
+      "company": "LTIMindtree",
+      "image": "https://media.licdn.com/dms/image/v2/D5603AQHKQoydTJDNpw/profile-displayphoto-shrink_800_800/B56ZwOJh6kJMAc-/0/1769763908903?e=1772064000&v=beta&t=lxOfFNMuxMp1kV6y0Llhlu3DQ2Pzf4lOv-jHmnMHbbg",
+      "quote": "I had the privilege of working closely with Siddharth Mahajan on our platform team, and I can confidently say that he has been a cornerstone in shaping our microservices architecture. His deep expertise in Spring Cloud and hands-on experience with Istio and API Gateway played a crucial role in transforming our monolithic system into a scalable, secure, and efficient microservices-based architecture.",
+      "rating": 0
+    },
+    {
+      "name": "Priyanka A",
+      "role": "Specialist Data Engineer",
+      "company": "LTIMindtree",
+      "image": "https://media.licdn.com/dms/image/v2/D5603AQEXwqOrrUL2UQ/profile-displayphoto-crop_800_800/B56Zt9SpAFHkAI-/0/1767333599747?e=1772064000&v=beta&t=chyHD6VS928a5xB16R65fP2xRAtj74Fuv7uUyM7pBl8",
+      "quote": "It was an absolute pleasure working with Siddharth. He is a young, energetic professional with a strong eagerness to learn and grow. As a Site Reliability Engineer, Siddharth played a crucial role in holding the systems team together, consistently demonstrating ownership and resilience under pressure.",
+      "rating": 0
+    }
+  ],
+  "testimonialsLink": "https://www.linkedin.com/in/siddharth-mhjn/details/recommendations/",
+  "devtoURL": "https://dev.to/siddharth-mhjn",
+  "blog": [],
+  "footerServices": [
+    "Cloud Architecture",
+    "Kubernetes Solutions",
+    "Platform Engineering",
+    "Website Development",
+    "AI Assisted Automation"
+  ],
+  "footerQuickLinks": [
+    { "name": "About", "href": "#about" },
+    { "name": "Projects", "href": "#projects" },
+    { "name": "Blog", "href": "#blog" },
+    { "name": "Contact", "href": "#contact" }
+  ]
+}

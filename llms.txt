@@ -1,0 +1,71 @@
+# Siddharth Mahajan – Portfolio
+
+> Siddharth Mahajan (also known as siddharthmhjn, siddharth-mhjn) is a Freelance Web Developer, Solution Architect, and Cloud Engineer based in India.
+
+## About
+
+Siddharth Mahajan is a freelance web developer and cloud engineer with 3+ years of professional experience building scalable, secure cloud-native systems. He specializes in Kubernetes, Istio, Spring Boot, Spring Cloud, Keycloak, and observability tools like OpenSearch, Prometheus, and Grafana. Experienced in designing API Gateways, automating infrastructure, and building real-time data pipelines across enterprise environments. Passionate about mentoring teams, evaluating emerging technologies, and aligning architecture with business goals. He is available for freelance web development, technical consulting, and cloud architecture projects.
+
+## Skills
+
+- Cloud, Platform & Container Engineering: Docker, Podman, Kubernetes, Rancher, Istio, Azure, AKS, AWS (Basic), VMware, Service Mesh, Nginx, Linux, Windows
+- Programming, Scripting & Automation: Java, C, C++, Python, Shell, PowerShell, Automation Scripting, Git, GitHub, CI/CD, Wireframing
+- Application, Web & AI-Enabled Development: Spring Boot, Spring Cloud, Spring Security, Vue.js, Quasar, HTML, CSS, Claude AI, Cursor IDE, LLM-Assisted Development, Prompt Engineering, AI-Driven Debugging & Optimization
+- Data Platforms, Observability & API Security: MySQL, PostgreSQL, OpenSearch, Prometheus, Grafana, Kafka, Apache NiFi, APISIX, WSO2 API Gateway, Keycloak, AI-Enhanced Development Workflows, Intelligent Code Refactoring
+
+## Experience
+
+### Software Engineer I at Astreya (June 2025 – Present)
+- Developed a reactive API Gateway with Spring Cloud Gateway, enabling dynamic routing and zero-downtime configuration updates
+- Implemented multi-tenant authentication with Keycloak and OAuth2 across distributed Kubernetes environments
+- Set up centralized logging with OpenSearch and unified API documentation using Swagger/OpenAPI
+- Led R&D on authentication strategies and contributed to architecture and IP planning decisions
+- Adopted AI-assisted development (Claude) for code review, debugging, and accelerating R&D cycles, improving development efficiency and code quality
+
+### Member Technical Staff at NEC India (April 2025 – June 2025)
+- Built 4+ real-time data pipelines for smart city projects, enabling unified data flow and faster decision-making
+- Deployed EFK logging with Istio on Kubernetes, cutting root cause analysis time by 50% and reducing service interruptions by 30%
+- Enhanced platform architecture to onboard 5+ vendors, improving scalability and ecosystem interoperability
+
+### Software Engineer at LTIMindtree (July 2022 – March 2025)
+- Managed 5+ enterprise Kubernetes clusters with Istio service mesh, achieving 80% traceability for an AIOps platform
+- Built a custom API Gateway and operated a telemetry platform processing terabytes of monitoring data
+- Evaluated 5+ cloud-native tools across service mesh, orchestration, and API management to drive architecture decisions
+- Automated infrastructure with 10+ Bash/Python scripts, improving provisioning efficiency by 20%, and mentored team members
+
+## Projects
+
+### Protofolio_
+A collection of 6 professionally designed portfolio templates with a retro terminal-style landing page. Technologies: HTML, Tailwind CSS, JavaScript, JSON.
+Link: https://protofolio.siddharthmhjn.com
+
+### API Gateway Solution
+Scalable API gateway with rate limiting, authentication, and analytics dashboard. Technologies: APISIX, Keycloak, Docker.
+
+## Certifications
+
+- ITOPS Automation Engineer (Foundation Level) – LTIMindtree
+- Cloud & Infrastructure Service (Professional Certification) – LTI
+- Web Development (Full-Stack Development) – Internshala
+
+## Awards
+
+- Technical Subject Matter Expert – LTIMindtree (June 2024)
+- Spotlight Award – LTIMindtree (June 2023) – Service Mesh architecture
+- Spotlight Award – LTIMindtree (March 2023) – Platform Core and Istio
+
+## Services Offered
+
+- Cloud Architecture
+- Kubernetes Solutions
+- Platform Engineering
+- Website Development
+- AI Assisted Automation
+
+## Contact
+
+- Website: https://siddharthmhjn.com
+- Email: siddharth.mhjn99@gmail.com
+- LinkedIn: https://www.linkedin.com/in/siddharth-mhjn
+- GitHub: https://github.com/siddharth-mhjn
+- Blog: https://dev.to/siddharth-mhjn
