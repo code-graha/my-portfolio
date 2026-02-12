@@ -1,0 +1,1217 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+        content="Portfolio of Siddharth Mahajan, a Solution Architect &amp; Cloud Engineer specializing in Kubernetes, automation, and full-stack development."
+        name="description" />
+    <meta content="Siddharth Mahajan, Cloud Engineer, DevOps, Kubernetes, Platform Engineer, Portfolio"
+        name="keywords" />
+    <meta content="Siddharth Mahajan" name="author" />
+    <!-- Open Graph Meta Tags -->
+    <meta content="Siddharth Mahajan | Solution Architect &amp; Cloud Engineer" property="og:title" />
+    <meta content="Explore the portfolio, projects, and certifications of Siddharth Mahajan."
+        property="og:description" />
+    <meta content="Profile_Photo.png" property="og:image" />
+    <meta content="website" property="og:type" />
+    <meta content="http://siddharth.work.gd" property="og:url" />
+    <script>
+        if (localStorage.getItem('theme') === 'dark' ||
+            (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };</script>
+    <script crossorigin="anonymous" referrerpolicy="no-referrer"
+        src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script>tailwind.config = {
+            darkMode: 'class',
+            "theme": {
+                "extend": {
+                    "colors": {
+                        "soft-white": "#FAFAFA",
+                        "deep-navy": "#040C3B",
+                        "sky-blue": "#6CCFF6",
+                        "dark-gray": "#121212"
+                    },
+                    "fontFamily": {
+                        "inter": [
+                            "Inter",
+                            "sans-serif"
+                        ],
+                        "sans": [
+                            "Inter",
+                            "sans-serif"
+                        ]
+                    }
+                }
+            }
+        };</script>
+    <title>Siddharth Mahajan | Solution Architect &amp; Cloud Engineer</title>
+    <link href="favicon.jpg" rel="icon" type="image/jpeg" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        /* Preserve Font Awesome icons */
+        .fa,
+        .fas,
+        .far,
+        .fal,
+        .fab {
+            font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+        }
+    </style>
+    <style>
+        .highlighted-section {
+            outline: 2px solid #3F20FB;
+            background-color: rgba(63, 32, 251, 0.1);
+        }
+
+        .edit-button {
+            position: absolute;
+            z-index: 1000;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        html,
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Page-wide fade in on load */
+        body {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        body.page-loaded {
+            opacity: 1;
+        }
+
+        /* Scroll reveal animation - bigger motion */
+        .fade-up-big {
+            opacity: 0;
+            transform: translateY(70px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-up-big.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Card hover effect - bigger lift + tilt */
+        .hover-card-big {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .hover-card-big:hover {
+            transform: translateY(-10px) scale(1.04) rotateX(3deg) rotateY(-3deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Image zoom effect */
+        .image-zoom {
+            transition: transform 0.6s ease;
+        }
+
+        .image-zoom:hover {
+            transform: scale(1.08);
+        }
+
+        /* Navigation underline animation */
+        nav a span {
+            position: relative;
+        }
+
+        nav a span::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0%;
+            height: 3px;
+            background-color: currentColor;
+            transition: width 0.3s ease-in-out;
+        }
+
+        nav a span:hover::after {
+            width: 100%;
+        }
+    </style>
+    <style>
+        /* Mobile menu slide animation */
+        #mobile-menu {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        #mobile-menu.hidden {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body class="bg-soft-white text-dark-gray font-inter dark:bg-dark-gray dark:text-white">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200" id="header">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#">
+                    <div class="text-xl font-bold text-deep-navy">Siddharth Mahajan</div>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about"><span
+                            class="text-gray-600 hover:text-deep-navy transition-colors cursor-pointer cursor-pointer">About</span></a>
+                    <a href="#skills"><span
+                            class="text-gray-600 hover:text-deep-navy transition-colors cursor-pointer cursor-pointer">Skills</span></a>
+                    <a href="#experience"><span
+                            class="text-gray-600 hover:text-deep-navy transition-colors cursor-pointer cursor-pointer">Experience</span></a>
+                    <a href="#projects"><span
+                            class="text-gray-600 hover:text-deep-navy transition-colors cursor-pointer cursor-pointer">Projects</span></a>
+                    <a href="#testimonials"><span
+                            class="text-gray-600 hover:text-deep-navy transition-colors cursor-pointer cursor-pointer">Testimonials</span></a>
+                    <!-- <a href="#blog"><span
+                        class="text-gray-600 hover:text-deep-navy transition-colors cursor-pointer cursor-pointer">Articles</span></a> -->
+                    <a href="#contact"><span
+                            class="text-gray-600 hover:text-deep-navy transition-colors cursor-pointer cursor-pointer">Contact</span></a>
+                </div>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <i class="fas fa-bars text-deep-navy"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden mt-4 bg-white rounded-lg shadow-lg p-4 dark:bg-[#2a2a2a] hover-card-big"
+                id="mobile-menu">
+                <div class="flex flex-col space-y-4">
+                    <a href="#about"><span
+                            class="text-gray-600 dark:text-gray-300 hover:text-deep-navy dark:text-white transition-colors cursor-pointer cursor-pointer">About</span></a>
+                    <a href="#skills"><span
+                            class="text-gray-600 dark:text-gray-300 hover:text-deep-navy dark:text-white transition-colors cursor-pointer cursor-pointer">Skills</span></a>
+                    <a href="#experience"><span
+                            class="text-gray-600 dark:text-gray-300 hover:text-deep-navy dark:text-white transition-colors cursor-pointer cursor-pointer">Experience</span></a>
+                    <a href="#projects"><span
+                            class="text-gray-600 dark:text-gray-300 hover:text-deep-navy dark:text-white transition-colors cursor-pointer cursor-pointer">Projects</span></a>
+                    <a href="#testimonials"><span
+                            class="text-gray-600 dark:text-gray-300 hover:text-deep-navy dark:text-white transition-colors cursor-pointer cursor-pointer">Testimonials</span></a>
+                    <!-- <a href="#blog"><span
+                        class="text-gray-600 dark:text-gray-300 hover:text-deep-navy dark:text-white transition-colors cursor-pointer cursor-pointer">Articles</span></a> -->
+                    <a href="#contact"><span
+                            class="text-gray-600 dark:text-gray-300 hover:text-deep-navy dark:text-white transition-colors cursor-pointer cursor-pointer">Contact</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section
+        class="h-[600px] bg-gradient-to-br from-deep-navy to-blue-900 text-white flex items-center pt-20 fade-up-big"
+        id="hero">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6">Siddharth Mahajan</h1>
+                    <p class="text-xl md:text-2xl mb-8 text-sky-blue">Solution Architect &amp; Cloud Engineer |
+                        Kubernetes | Service
+                        Mesh | Full-Stack Developer</p>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <!-- <a href="https://drive.google.com/file/d/1yo0BLdOXLAEGc9z0gcOIwWCSQ0JfgM4P/view?usp=drive_link"
+                            target="_blank" rel="noopener noreferrer"> -->
+                        <a href="Resume.pdf" rel="noopener noreferrer" target="_blank">
+                            <span
+                                class="bg-sky-blue text-deep-navy px-6 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors flex items-center cursor-pointer">
+                                <!-- <i class="fas fa-download mr-2"></i>Download CV -->
+                                <i class="fas fa-eye mr-2"></i>View CV
+                            </span></a>
+                        <a href="https://www.linkedin.com/in/siddharth-mhjn" rel="noopener noreferrer"
+                            target="_blank"><span
+                                class="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-deep-navy transition-colors flex items-center cursor-pointer"
+                                target="_blank">
+                                <i class="fab fa-linkedin mr-2"></i>LinkedIn
+                            </span></a>
+                        <a href="https://github.com/siddharth-mhjn" rel="noopener noreferrer" target="_blank"><span
+                                class="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-deep-navy transition-colors flex items-center cursor-pointer"
+                                target="_blank">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </span></a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <img alt="Caricature of Siddharth Mahajan" class="h-96 object-cover rounded-lg mx-auto image-zoom"
+                        src="Banner_Photo.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Me -->
+    <section class="py-20 bg-white dark:bg-[#1e1e1e] fade-up-big" id="about">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-deep-navy dark:text-white">About Me</h2>
+            <div class="grid md:grid-cols-3 gap-12 items-center">
+                <div class="md:col-span-1">
+                    <img alt="Profile" class="w-80 h-80 object-cover rounded-lg mx-auto shadow-md image-zoom"
+                        src="Profile_Photo.png" />
+                </div>
+                <div class="md:col-span-2">
+                    <p class="text-lg mb-6 leading-relaxed">
+                        I’m Siddharth Mahajan, a Solution Architect and Cloud Engineer specializing in designing
+                        scalable, secure, and highly available cloud-native systems. My expertise lies in Kubernetes,
+                        service mesh technologies like Istio, and building efficient pipelines that boost delivery speed
+                        and system resilience. I’ve led infrastructure modernization initiatives, optimized
+                        observability using EFK stacks, and crafted CI/CD workflows for critical applications, always
+                        grounding architecture decisions in real-world performance and reliability.
+                    </p>
+                    <p class="text-lg mb-6 leading-relaxed">
+                        Beyond technical implementation, I focus on enabling vendor interoperability, creating custom
+                        API gateways, and mentoring teams to bridge the gap between technology and business needs. By
+                        combining coding skills, cloud expertise, and collaborative leadership, I deliver solutions that
+                        not only function effectively but continuously evolve to meet changing demands.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="text-center p-4 bg-gray-50 rounded-lg shadow-sm dark:bg-[#2a2a2a] hover-card-big">
+                            <div class="text-2xl font-bold text-sky-blue">3+</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-300">Years Experience</div>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-lg shadow-sm dark:bg-[#2a2a2a] hover-card-big">
+                            <div class="text-2xl font-bold text-sky-blue">10+</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-300">Projects Completed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills -->
+    <section class="py-20 bg-gray-50 dark:bg-[#1f1f1f] fade-up-big" id="skills">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-deep-navy dark:text-white">Technical Skills</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow dark:bg-[#2a2a2a] hover-card-big"
+                    id="cloud-skills">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cloud text-sky-blue text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold">Cloud &amp; DevOps</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Docker</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Podman</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Kubernetes</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Rancher</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Istio</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Azure</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">AKS</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">AWS</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">VMware</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">NGINX</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Git</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">CI/CD</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Linux</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Windows</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow dark:bg-[#2a2a2a] hover-card-big"
+                    id="programming-skills">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-code text-sky-blue text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold">Programming &amp; Scripting</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Java</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Python</span>
+                        <span class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Shell
+                            Scripting</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">PowerShell</span>
+                        <span class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">C</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">C++</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow dark:bg-[#2a2a2a] hover-card-big"
+                    id="web-skills">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-globe text-sky-blue text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold">Frameworks &amp; Web</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Spring
+                            Boot</span>
+                        <span class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Spring
+                            Security</span>
+                        <span class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Spring
+                            Cloud</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Vue.js</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Quasar</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">HTML</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">CSS</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow dark:bg-[#2a2a2a] hover-card-big"
+                    id="data-skills">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-database text-sky-blue text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold">Data &amp; Security</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">MySQL</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">PostgreSQL</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">OpenSearch</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Prometheus</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Grafana</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Kafka</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">APISIX</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Keycloak</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">WSO2</span>
+                        <span
+                            class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm dark:bg-[#4d4d4d]">Nifi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Experience -->
+    <section class="py-20 bg-white dark:bg-[#1e1e1e] fade-up-big" id="experience">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-deep-navy dark:text-white">Professional Experience</h2>
+            <div class="max-w-5xl mx-auto">
+                <div class="relative">
+                    <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-sky-blue/30"></div>
+                    <div class="relative flex items-start mb-16 pl-20" id="exp-3">
+                        <div
+                            class="absolute left-0 flex-shrink-0 w-16 h-16 bg-gradient-to-br from-sky-blue to-blue-500 rounded-full flex items-center justify-center shadow-lg">
+                            <i class="fas fa-building text-white text-xl"></i>
+                        </div>
+                        <div
+                            class="flex-1 bg-soft-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow dark:bg-[#2a2a2a] hover-card-big">
+                            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-deep-navy mb-2 dark:text-white">Software Engineer
+                                        I</h3>
+                                    <div class="flex items-center text-sky-blue font-semibold mb-2">
+                                        <i class="fas fa-briefcase mr-2"></i>
+                                        <span>Astreya</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex items-center text-gray-600 bg-white px-4 py-2 rounded-lg border mt-3 lg:mt-0 dark:text-gray-300 dark:bg-[#2a2a2a]">
+                                    <i class="fas fa-calendar-alt mr-2 text-sky-blue"></i>
+                                    <span class="font-medium">June 2025 – Present</span>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed mb-4 dark:text-gray-200">Contributing to the design
+                                and development of system architecture to support team operations and ensure project
+                                scalability.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="bg-sky-blue/10 text-sky-blue px-3 py-1 rounded-full text-sm font-medium">Cloud-Native</span>
+                                <span
+                                    class="bg-sky-blue/10 text-sky-blue px-3 py-1 rounded-full text-sm font-medium">Automation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-start mb-16 pl-20" id="exp-2">
+                        <div
+                            class="absolute left-0 flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
+                            <i class="fas fa-city text-white text-xl"></i>
+                        </div>
+                        <div
+                            class="flex-1 bg-soft-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow dark:bg-[#2a2a2a] hover-card-big">
+                            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-deep-navy mb-2 dark:text-white">Member Technical
+                                        Staff</h3>
+                                    <div class="flex items-center text-sky-blue font-semibold mb-2">
+                                        <i class="fas fa-briefcase mr-2"></i>
+                                        <span>NEC India</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex items-center text-gray-600 bg-white px-4 py-2 rounded-lg border mt-3 lg:mt-0 dark:text-gray-300 dark:bg-[#2a2a2a]">
+                                    <i class="fas fa-calendar-alt mr-2 text-sky-blue"></i>
+                                    <span class="font-medium">April 2025 – June 2025</span>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed mb-4 dark:text-gray-200">Built data pipelines for
+                                smart city projects, enabling real-time insights. Deployed EFK with Istio on Kubernetes
+                                to enhance observability and reduce service issues. Improved system architecture to
+                                support vendor onboarding and platform scalability.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="bg-sky-blue/10 text-sky-blue px-3 py-1 rounded-full text-sm font-medium">Kubernetes</span>
+                                <span
+                                    class="bg-sky-blue/10 text-sky-blue px-3 py-1 rounded-full text-sm font-medium">EFK</span>
+                                <span
+                                    class="bg-sky-blue/10 text-sky-blue px-3 py-1 rounded-full text-sm font-medium">Istio</span>
+                                <span
+                                    class="bg-sky-blue/10 text-sky-blue px-3 py-1 rounded-full text-sm font-medium">Nifi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex items-start pl-20" id="exp-1">
+                        <div
+                            class="absolute left-0 flex-shrink-0 w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+                            <i class="fas fa-server text-white text-xl"></i>
+                        </div>
+                        <div
+                            class="flex-1 bg-soft-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow dark:bg-[#2a2a2a] hover-card-big">
+                            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-deep-navy mb-2 dark:text-white">Software Engineer
+                                    </h3>
+                                    <div class="flex items-center text-sky-blue font-semibold mb-2">
+                                        <i class="fas fa-briefcase mr-2"></i>
+                                        <span>LTIMindtree</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex items-center text-gray-600 bg-white px-4 py-2 rounded-lg border mt-3 lg:mt-0 dark:text-gray-300 dark:bg-[#2a2a2a]">
+                                    <i class="fas fa-calendar-alt mr-2 text-sky-blue"></i>
+                                    <span class="font-medium">July 2022 – March 2025</span>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed mb-4 dark:text-gray-200">Managed Kubernetes clusters
+                                with Istio integration for improved observability. Designed a custom API Gateway,
+                                automated infrastructure with scripts, and evaluated cloud-native tools for scalable
+                                systems. Enhanced monitoring through a high-scale telemetry platform and supported team
+                                efficiency and training.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="bg-sky-blue/10 text-sky-blue px-3 py-1 rounded-full text-sm font-medium">Kubernetes</span>
+                                <span
+                                    class="bg-sky-blue/10 text-sky-blue px-3 py-1 rounded-full text-sm font-medium">Service
+                                    Mesh</span>
+                                <span
+                                    class="bg-sky-blue/10 text-sky-blue px-3 py-1 rounded-full text-sm font-medium">API
+                                    Gateway</span>
+                                <span
+                                    class="bg-sky-blue/10 text-sky-blue px-3 py-1 rounded-full text-sm font-medium">Spring
+                                    Cloud</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects -->
+    <section class="py-20 bg-gray-50 dark:bg-[#1f1f1f] fade-up-big" id="projects">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-deep-navy dark:text-white">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow dark:bg-[#2a2a2a] hover-card-big"
+                    id="project-1">
+                    <div class="h-48 overflow-hidden">
+                        <img alt="kubernetes cluster dashboard with monitoring graphs and containers"
+                            class="w-full h-full object-cover image-zoom"
+                            src="https://storage.googleapis.com/uxpilot-auth.appspot.com/c14eb582ba-ed52d874f3db2fd15482.png" />
+                    </div>
+                    <div class="p-6 hover-card-big">
+                        <h3 class="text-xl font-semibold mb-3">Multi-Cluster K8s Platform</h3>
+                        <p class="text-gray-600 mb-4 dark:text-gray-300">Enterprise-grade Kubernetes platform with
+                            automated deployment,
+                            monitoring, and service mesh integration.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-sky-blue/20 text-sky-blue px-2 py-1 rounded text-xs">Kubernetes</span>
+                            <span class="bg-sky-blue/20 text-sky-blue px-2 py-1 rounded text-xs">Istio</span>
+                            <span class="bg-sky-blue/20 text-sky-blue px-2 py-1 rounded text-xs">Prometheus</span>
+                        </div>
+                        <span class="text-sky-blue hover:underline flex items-center cursor-pointer">
+                            <i class="fab fa-github mr-2"></i>View on GitHub
+                        </span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow dark:bg-[#2a2a2a] hover-card-big"
+                    id="project-2">
+                    <div class="h-48 overflow-hidden">
+                        <img alt="API gateway architecture diagram with microservices"
+                            class="w-full h-full object-cover image-zoom"
+                            src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ec37564346-b444b826b5a927726fc2.png" />
+                    </div>
+                    <div class="p-6 hover-card-big">
+                        <h3 class="text-xl font-semibold mb-3">API Gateway Solution</h3>
+                        <p class="text-gray-600 mb-4 dark:text-gray-300">Scalable API gateway with rate limiting,
+                            authentication, and
+                            comprehensive analytics dashboard.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-sky-blue/20 text-sky-blue px-2 py-1 rounded text-xs">APISIX</span>
+                            <span class="bg-sky-blue/20 text-sky-blue px-2 py-1 rounded text-xs">Keycloak</span>
+                            <span class="bg-sky-blue/20 text-sky-blue px-2 py-1 rounded text-xs">Docker</span>
+                        </div>
+                        <span class="text-sky-blue hover:underline flex items-center cursor-pointer">
+                            <i class="fab fa-github mr-2"></i>View on GitHub
+                        </span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow dark:bg-[#2a2a2a] hover-card-big"
+                    id="project-3">
+                    <div class="h-48 overflow-hidden">
+                        <img alt="smart city IoT dashboard with real-time data visualization"
+                            class="w-full h-full object-cover image-zoom"
+                            src="https://storage.googleapis.com/uxpilot-auth.appspot.com/74b0a40896-7c00e6832f16a3d552fa.png" />
+                    </div>
+                    <div class="p-6 hover-card-big">
+                        <h3 class="text-xl font-semibold mb-3">Smart City Pipeline</h3>
+                        <p class="text-gray-600 mb-4 dark:text-gray-300">Real-time data processing pipeline for smart
+                            city IoT sensors with
+                            EFK stack implementation.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-sky-blue/20 text-sky-blue px-2 py-1 rounded text-xs">Elasticsearch</span>
+                            <span class="bg-sky-blue/20 text-sky-blue px-2 py-1 rounded text-xs">Kafka</span>
+                            <span class="bg-sky-blue/20 text-sky-blue px-2 py-1 rounded text-xs">Python</span>
+                        </div>
+                        <span class="text-sky-blue hover:underline flex items-center cursor-pointer">
+                            <i class="fab fa-github mr-2"></i>View on GitHub
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="https://github.com/siddharth-mhjn" rel="noopener noreferrer" target="_blank"><span
+                        class="inline-block px-6 py-3 bg-deep-navy text-white rounded-lg hover:bg-opacity-90 transition-colors cursor-pointer">
+                        View All Projects
+                    </span></a>
+            </div>
+        </div>
+    </section>
+    <!-- Certifications -->
+    <section class="py-20 bg-white dark:bg-[#1e1e1e] fade-up-big" id="certifications">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-deep-navy dark:text-white">Certifications &amp; Awards
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow dark:bg-[#2a2a2a] hover-card-big"
+                    id="cert-3">
+                    <i class="fas fa-certificate text-sky-blue text-4xl mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-2">ITOPS Automation (Foundation) Engineer</h3>
+                    <p class="text-gray-600 dark:text-gray-300">LTIMindtree Certified</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow dark:bg-[#2a2a2a] hover-card-big"
+                    id="cert-2">
+                    <i class="fas fa-cloud text-sky-blue text-4xl mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-2">Cloud &amp; Infrastructure Service Professional</h3>
+                    <p class="text-gray-600 dark:text-gray-300">LTI Certified</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow dark:bg-[#2a2a2a] hover-card-big"
+                    id="cert-1">
+                    <i class="fas fa-cogs text-sky-blue text-4xl mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-2">Web Development</h3>
+                    <p class="text-gray-600 dark:text-gray-300">INTERNSHALA Certification</p>
+                </div>
+            </div>
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-center mb-8 text-deep-navy dark:text-white">Awards &amp; Recognition
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="flex items-start p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow dark:bg-[#2a2a2a] hover-card-big"
+                        id="award-3">
+                        <div class="mr-4">
+                            <i class="fas fa-medal text-blue-500 text-3xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-2">Technical Subject Matter</h4>
+                            <p class="text-gray-600 mb-2 dark:text-gray-300">June 2024</p>
+                            <p class="text-gray-700 dark:text-gray-200">Appreciated as a Technical Subject Matter Expert
+                                for contributions to the Automation Academy training program from April 2023 to March
+                                2024.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow dark:bg-[#2a2a2a] hover-card-big"
+                        id="award-2">
+                        <div class="mr-4">
+                            <i class="fas fa-trophy text-yellow-500 text-3xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-2">Spotlight Award</h4>
+                            <p class="text-gray-600 mb-2 dark:text-gray-300">June 2023</p>
+                            <p class="text-gray-700 dark:text-gray-200">Honored for pioneering advanced technologies and
+                                implementing a robust Service Mesh architecture, leading to a 30% improvement in system
+                                scalability.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow dark:bg-[#2a2a2a] hover-card-big"
+                        id="award-1">
+                        <div class="mr-4">
+                            <i class="fas fa-trophy text-yellow-500 text-3xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-2">Spotlight Award</h4>
+                            <p class="text-gray-600 mb-2 dark:text-gray-300">March 2023</p>
+                            <p class="text-gray-700 dark:text-gray-200">Recognized for rapidly mastering Platform
+                                (JORITZ) Core and Istio; delivered a live Service Mesh demo that influenced
+                                architectural direction, reducing decision-making time by 30%.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50 dark:bg-[#1f1f1f] fade-up-big" id="testimonials">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-deep-navy dark:text-white">What People Say</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow dark:bg-[#2a2a2a] hover-card-big"
+                    id="testimonial-1">
+                    <div class="flex items-center mb-6">
+                        <img alt="Karthik Battaram" class="w-12 h-12 rounded-full object-cover mr-4 image-zoom"
+                            src="https://media.licdn.com/dms/image/v2/D5603AQFr1PpRelbMfw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1721402399711?e=1755734400&amp;v=beta&amp;t=cBec9zbR_KxIVJmBp-8_ZtR16V3a-equAGbXJ0ZU_1k" />
+                        <div>
+                            <h4 class="font-semibold text-deep-navy dark:text-white">Karthik Battaram</h4>
+                            <p class="text-gray-600 text-sm dark:text-gray-300">Senior Data Engineer, LTIMindtree</p>
+                        </div>
+                    </div>
+                    <!-- <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div> -->
+                    <p class="text-gray-700 leading-relaxed dark:text-gray-200">"I've had the pleasure of working
+                        closely with Siddharth and can confidently say he is one of the most technically sound and
+                        dependable engineers I’ve worked with. What truly sets him apart is his strong sense of
+                        ownership — once he takes on a task, he sees it through with focus, accountability, and a clear
+                        understanding of the bigger picture."</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow dark:bg-[#2a2a2a] hover-card-big"
+                    id="testimonial-2">
+                    <div class="flex items-center mb-6">
+                        <img alt="Akshay Reddy Emmadi" class="w-12 h-12 rounded-full object-cover mr-4 image-zoom"
+                            src="https://cdn-icons-png.flaticon.com/128/1144/1144760.png" />
+                        <div>
+                            <h4 class="font-semibold text-deep-navy dark:text-white">
+                                Akshay Reddy Emmadi
+                            </h4>
+                            <p class="text-gray-600 text-sm dark:text-gray-300">
+                                Software Engineer, LTIMindtree</p>
+                        </div>
+                    </div>
+                    <!-- <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div> -->
+                    <p class="text-gray-700 leading-relaxed dark:text-gray-200">"I had the privilege of working closely
+                        with Siddharth Mahajan on our platform team, and I can confidently say that he has been a
+                        cornerstone in shaping our microservices architecture. His deep expertise in Spring Cloud and
+                        hands-on experience with Istio and API Gateway played a crucial role in transforming our
+                        monolithic system into a scalable, secure, and efficient microservices-based architecture."</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow dark:bg-[#2a2a2a] hover-card-big"
+                    id="testimonial-3">
+                    <div class="flex items-center mb-6">
+                        <img alt="Priyanka A" class="w-12 h-12 rounded-full object-cover mr-4 image-zoom"
+                            src="https://media.licdn.com/dms/image/v2/D5603AQESB7-FUvYLSg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1705123267506?e=1756339200&amp;v=beta&amp;t=xyb7Oem3lygnUYNnlofVu9PsoK7L3y2apYcbWBOy3g8" />
+                        <div>
+                            <h4 class="font-semibold text-deep-navy dark:text-white">Priyanka A</h4>
+                            <p class="text-gray-600 text-sm dark:text-gray-300">
+                                Specialist Data Engineer, LTIMindtree</p>
+                        </div>
+                    </div>
+                    <!-- <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div> -->
+                    <p class="text-gray-700 leading-relaxed dark:text-gray-200">"It was an absolute pleasure working
+                        with Siddharth. He is a young, energetic professional with a strong eagerness to learn and grow.
+                        As a Site Reliability Engineer, Siddharth played a crucial role in holding the systems team
+                        together, consistently demonstrating ownership and resilience under pressure."</p>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="https://www.linkedin.com/in/siddharth-mhjn/details/recommendations/" rel="noopener noreferrer"
+                    target="_blank"><span
+                        class="inline-block px-6 py-3 bg-deep-navy text-white rounded-lg hover:bg-opacity-90 transition-colors cursor-pointer">
+                        View More
+                    </span></a>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section (Optional) -->
+    <!-- <section id="blog" class="py-20 bg-white dark:bg-[#1e1e1e]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-deep-navy dark:text-white">Latest Articles</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div id="blog-1"
+                    class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow dark:bg-[#2a2a2a]">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1c066159bd-49cb3f1b9eb1cb1ae2f8.png"
+                            alt="kubernetes best practices visualization with diagrams">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sky-blue font-medium mb-2">DevOps</p>
+                        <h3 class="text-xl font-semibold mb-3">Kubernetes Best Practices for Production</h3>
+                        <p class="text-gray-600 mb-4 dark:text-gray-300">Key strategies for deploying resilient and scalable Kubernetes
+                            clusters in enterprise environments.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">July 15, 2024</span>
+                            <span class="text-sky-blue hover:underline cursor-pointer">Read More</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="blog-2"
+                    class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow dark:bg-[#2a2a2a]">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://storage.googleapis.com/uxpilot-auth.appspot.com/a2f17eb7de-fa27ecfa34f6860ce3f7.png"
+                            alt="service mesh architecture with istio and security">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sky-blue font-medium mb-2">Cloud Native</p>
+                        <h3 class="text-xl font-semibold mb-3">Service Mesh: Beyond the Basics</h3>
+                        <p class="text-gray-600 mb-4 dark:text-gray-300">Advanced Istio configurations for enhanced security, traffic
+                            management, and observability.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">June 22, 2024</span>
+                            <span class="text-sky-blue hover:underline cursor-pointer">Read More</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="blog-3"
+                    class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow dark:bg-[#2a2a2a]">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://storage.googleapis.com/uxpilot-auth.appspot.com/3e102b7312-97235e1bbd3ece85434e.png"
+                            alt="observability dashboard with prometheus and grafana monitoring">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sky-blue font-medium mb-2">Monitoring</p>
+                        <h3 class="text-xl font-semibold mb-3">Building a Comprehensive Observability Stack</h3>
+                        <p class="text-gray-600 mb-4 dark:text-gray-300">Integrating Prometheus, Grafana, and OpenSearch for full-stack
+                            visibility into cloud applications.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">May 10, 2024</span>
+                            <span class="text-sky-blue hover:underline cursor-pointer">Read More</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <span
+                    class="inline-block px-6 py-3 bg-deep-navy text-white rounded-lg hover:bg-opacity-90 transition-colors cursor-pointer">
+                    View All Articles
+                </span>
+            </div>
+        </div>
+    </section> -->
+    <!-- Contact -->
+    <section class="py-20 bg-deep-navy text-white fade-up-big" id="contact">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Get In Touch</h2>
+            <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Let's Connect</h3>
+                    <p class="text-gray-300 mb-8">I'm always interested in discussing new opportunities, innovative
+                        projects, and collaborations in cloud technologies.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-sky-blue mr-4 w-6"></i>
+                            <a href="mailto:siddharth.mhjn99@gmail.com"><span
+                                    class="hover:text-sky-blue transition-colors cursor-pointer">siddharth.mhjn99@gmail.com</span></a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-linkedin text-sky-blue mr-4 w-6"></i>
+                            <a href="https://www.linkedin.com/in/siddharth-mhjn" rel="noopener noreferrer"
+                                target="_blank"><span class="hover:text-sky-blue transition-colors cursor-pointer"
+                                    target="_blank">LinkedIn
+                                    Profile</span></a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-github text-sky-blue mr-4 w-6"></i>
+                            <a href="https://github.com/siddharth-mhjn" rel="noopener noreferrer" target="_blank"><span
+                                    class="hover:text-sky-blue transition-colors cursor-pointer" target="_blank">GitHub
+                                    Profile</span></a>
+                        </div>
+                    </div>
+                    <div class="mt-10 p-6 bg-white/5 rounded-lg hover-card-big">
+                        <h4 class="text-lg font-semibold mb-4">Availability</h4>
+                        <p class="text-gray-300 mb-2">I'm currently available for:</p>
+                        <ul class="space-y-2 text-gray-300">
+                            <!-- <li class="flex items-center">
+                                <i class="fas fa-check text-sky-blue mr-2"></i>
+                                Freelance projects
+                            </li> -->
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-sky-blue mr-2"></i>
+                                Technical consulting
+                            </li>
+                            <!-- <li class="flex items-center">
+                                <i class="fas fa-check text-sky-blue mr-2"></i>
+                                Full-time opportunities
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" placeholder="John Doe"
+                                class="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-blue">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Your Email</label>
+                            <input type="email" id="email" placeholder="john@example.com"
+                                class="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-blue">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Your Message</label>
+                            <textarea id="message" rows="5" placeholder="I'd like to discuss a project..."
+                                class="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-blue"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-sky-blue text-deep-navy font-semibold py-3 px-6 rounded-lg hover:bg-blue-400 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div> -->
+                <div>
+                    <form class="space-y-6" id="contact-form">
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-white" for="name">Your Name</label>
+                            <input
+                                class="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-blue"
+                                id="name" placeholder="John Doe" required="" type="text" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-white" for="email">Your Email</label>
+                            <input
+                                class="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-blue"
+                                id="email" placeholder="john@example.com" required="" type="email" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-white" for="message">Your Message</label>
+                            <textarea
+                                class="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-blue"
+                                id="message" placeholder="I'd like to discuss a project..." required=""
+                                rows="5"></textarea>
+                        </div>
+                        <button
+                            class="w-full bg-sky-blue text-deep-navy font-semibold py-3 px-6 rounded-lg hover:bg-blue-400 transition-colors"
+                            type="submit">
+                            Send Message
+                        </button>
+                        <p class="text-sm mt-4 text-center text-white" id="responseMsg"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-dark-gray text-white py-12" id="footer">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Siddharth Mahajan</h3>
+                    <p class="text-gray-400 mb-4">Solution Architect &amp; Cloud Engineer passionate about building
+                        scalable,
+                        resilient systems.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/siddharth-mhjn" rel="noopener noreferrer"
+                            target="_blank"><span
+                                class="text-gray-400 hover:text-sky-blue transition-colors cursor-pointer"
+                                target="_blank">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </span></a>
+                        <a href="https://github.com/siddharth-mhjn" rel="noopener noreferrer" target="_blank"><span
+                                class="text-gray-400 hover:text-sky-blue transition-colors cursor-pointer"
+                                target="_blank">
+                                <i class="fab fa-github text-xl"></i>
+                            </span></a>
+                        <!-- <span class="text-gray-400 hover:text-sky-blue transition-colors cursor-pointer"
+                            target="_blank">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </span> -->
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about"><span class="hover:text-sky-blue transition-colors cursor-pointer">About
+                                    Me</span></a></li>
+                        <li><a href="#skills"><span
+                                    class="hover:text-sky-blue transition-colors cursor-pointer">Skills</span></a></li>
+                        <li><a href="#experience"><span
+                                    class="hover:text-sky-blue transition-colors cursor-pointer">Experience</span></a>
+                        </li>
+                        <li><a href="#projects"><span
+                                    class="hover:text-sky-blue transition-colors cursor-pointer">Projects</span></a>
+                        </li>
+                        <li><a href="#testimonials"><span
+                                    class="hover:text-sky-blue transition-colors cursor-pointer">Testimonials</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Cloud Architecture</li>
+                        <li>Kubernetes Solutions</li>
+                        <li>Platform Engineering</li>
+                        <li>Website Development</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-sky-blue"></i>
+                            siddharth.mhjn99@gmail.com
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-sky-blue"></i>
+                            India
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 Siddharth Mahajan. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <span class="text-gray-400 hover:text-sky-blue text-sm transition-colors cursor-pointer">Privacy
+                            Policy</span>
+                        <span class="text-gray-400 hover:text-sky-blue text-sm transition-colors cursor-pointer">Terms
+                            of Service</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Toggle Theme Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button
+            class="w-12 h-12 bg-deep-navy text-white rounded-full flex items-center justify-center shadow-lg hover:bg-opacity-90 transition-colors"
+            id="theme-toggle">
+            <i class="fas"></i>
+        </button>
+    </div>
+    <script>
+
+        if (window.location.pathname === '/index.html') {
+            window.location.replace('/');
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Theme Toggle (Light/Dark)
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        const themeIcon = themeToggle.querySelector('i');
+
+        function updateIcon() {
+            if (html.classList.contains('dark')) {
+                themeIcon.className = 'fas fa-sun'; // ☀️ in dark mode
+            } else {
+                themeIcon.className = 'fas fa-moon'; // 🌙 in light mode
+            }
+        }
+
+        updateIcon();
+        themeToggle.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            } else {
+                html.classList.add('dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+            updateIcon();
+        });
+
+        // Contact Form Submission
+        // const contactForm = document.getElementById('contact-form');
+
+        // contactForm.addEventListener('submit', (e) => {
+        //     e.preventDefault();
+        //     // Add form submission logic here
+        //     alert('Thank you for your message! I will get back to you soon.');
+        //     contactForm.reset();
+        // });
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz33RebVYYG0WNVemq7seRQsQyHzUxKWkPaCT2nLOXF7mL0XLg-m-9yok-KhJY2ys0YSQ/exec'; // replace this!
+        const form = document.getElementById('contact-form');
+        const responseMsg = document.getElementById('responseMsg');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = {
+                name: form.name.value.trim(),
+                email: form.email.value.trim(),
+                message: form.message.value.trim()
+            };
+
+            responseMsg.textContent = '⏳ Sending...';
+
+            try {
+                const response = await fetch(scriptURL, {
+                    method: 'POST',
+                    //   headers: {
+                    //     'Content-Type': 'text/plain;charset=utf-8'  // avoids preflight
+                    //   },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+                if (result.status === 'success') {
+                    responseMsg.textContent = '✅ Message sent!';
+                    form.reset();
+                } else {
+                    responseMsg.textContent = '❌ Something went wrong.';
+                }
+            } catch (error) {
+                console.error('Error!', error);
+                responseMsg.textContent = '❌ Failed to send message. Try again.';
+            }
+        });
+
+        // Disable right-click
+        document.addEventListener('contextmenu', e => e.preventDefault());
+
+        // Disable specific key combinations
+        document.addEventListener('keydown', function (e) {
+            if (
+                e.key === 'F12' ||
+                (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+                (e.ctrlKey && e.key === 'U')
+            ) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // Detect DevTools open
+        let devtoolsOpen = false;
+        const threshold = 160;
+
+        setInterval(function () {
+            const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+            const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+
+            if (widthThreshold || heightThreshold) {
+                if (!devtoolsOpen) {
+                    devtoolsOpen = true;
+                    // Action: redirect or clear page
+                    window.location.replace("500.html");
+                }
+            } else {
+                devtoolsOpen = false;
+            }
+        }, 1000);
+
+    </script>
+    <script>
+        // Page load fade-in
+        window.addEventListener('load', () => {
+            document.body.classList.add('page-loaded');
+        });
+
+        // Scroll reveal
+        const fadeElems = document.querySelectorAll('.fade-up-big');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.15 });
+        fadeElems.forEach(el => observer.observe(el));
+
+        // Synchronized hero animation
+        const hero = document.getElementById('hero');
+        if (hero) {
+            hero.style.opacity = '0';
+            hero.style.transform = 'translateY(70px) scale(0.95)';
+            hero.style.transition = 'all 1.2s cubic-bezier(0.16, 1, 0.3, 1)';
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    hero.style.opacity = '1';
+                    hero.style.transform = 'translateY(0) scale(1)';
+                }, 300);
+            });
+        }
+
+
+        // Close mobile menu when a link is clicked with slide-out effect
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileMenu) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
