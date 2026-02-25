@@ -32,21 +32,15 @@
         body { font-family: 'Inter', sans-serif; }
         .font-mono { font-family: 'JetBrains Mono', monospace; }
 
-        @keyframes pulse-ring {
-            0% { transform: scale(1); opacity: 1; }
-            100% { transform: scale(1.4); opacity: 0; }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 15px rgba(6, 182, 212, 0.3); }
+            50%       { box-shadow: 0 0 25px rgba(6, 182, 212, 0.5); }
         }
 
-        .pulse-ring {
-            position: absolute;
-            inset: 0;
-            border: 2px solid rgba(239, 68, 68, 0.4);
-            border-radius: 50%;
-            animation: pulse-ring 1.5s ease-out infinite;
-        }
+        .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
 
         .gradient-text {
-            background: linear-gradient(135deg, #ef4444 0%, #8b5cf6 50%, #3b82f6 100%);
+            background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 50%, #3b82f6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -55,38 +49,41 @@
         .glass-card {
             background: rgba(26, 31, 53, 0.7);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(139, 92, 246, 0.2);
+            border: 1px solid rgba(6, 182, 212, 0.2);
         }
 
-        .neon-border-violet {
+        .neon-border {
             position: relative;
         }
 
-        .neon-border-violet::before {
+        .neon-border::before {
             content: '';
             position: absolute;
             inset: -1px;
             border-radius: inherit;
             padding: 1px;
-            background: linear-gradient(135deg, #ef4444, #8b5cf6, #3b82f6);
+            background: linear-gradient(135deg, #06b6d4, #8b5cf6, #3b82f6);
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
             pointer-events: none;
         }
 
-        .hex-bg {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%238b5cf6' fill-opacity='0.03'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        .grid-bg {
+            background-image:
+                linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
         }
     </style>
 </head>
 <body class="bg-dark-navy text-gray-100 min-h-screen flex flex-col overflow-x-hidden relative">
-    <!-- Hex Pattern Background -->
-    <div class="absolute inset-0 hex-bg"></div>
+    <!-- Grid Background -->
+    <div class="absolute inset-0 grid-bg"></div>
 
     <!-- Floating Orbs -->
-    <div class="absolute top-10 right-10 w-48 h-48 bg-red-500/10 rounded-full blur-3xl animate-pulse"></div>
-    <div class="absolute bottom-10 left-10 w-56 h-56 bg-neon-violet/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 0.5s;"></div>
+    <div class="absolute top-10 left-10 w-48 h-48 bg-neon-cyan/10 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-10 right-10 w-56 h-56 bg-neon-violet/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
 
     <!-- Main Content - Two Column Layout -->
     <main class="flex-1 flex items-center justify-center">
@@ -95,13 +92,11 @@
 
             <!-- Left Side - Illustration, Error Code, Message -->
             <div class="text-center lg:text-left order-1">
-                <!-- Shield Icon with Pulse -->
+                <!-- Shield Icon -->
                 <div class="mb-6 inline-block lg:block">
                     <div class="relative inline-block">
-                        <div class="pulse-ring"></div>
-                        <div class="pulse-ring" style="animation-delay: 0.5s;"></div>
-                        <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto lg:mx-0 rounded-full glass-card neon-border-violet flex items-center justify-center">
-                            <i class="fa-solid fa-shield-halved text-3xl sm:text-4xl text-red-400"></i>
+                        <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto lg:mx-0 rounded-full glass-card neon-border flex items-center justify-center animate-pulse-glow">
+                            <i class="fa-solid fa-shield-halved text-3xl sm:text-4xl text-neon-cyan"></i>
                         </div>
                     </div>
                 </div>
@@ -120,7 +115,7 @@
             <div class="order-2 space-y-5">
                 <!-- Method Info Cards -->
                 <div class="grid grid-cols-2 gap-3">
-                    <div class="glass-card rounded-xl p-4 neon-border-violet">
+                    <div class="glass-card rounded-xl p-4 neon-border">
                         <div class="flex items-center gap-2 mb-3">
                             <div class="w-8 h-8 rounded-lg bg-red-500/20 flex items-center justify-center">
                                 <i class="fa-solid fa-xmark text-red-400 text-sm"></i>
@@ -134,7 +129,7 @@
                             <span class="px-2 py-1 bg-red-500/10 text-red-400 rounded text-xs font-mono">PATCH</span>
                         </div>
                     </div>
-                    <div class="glass-card rounded-xl p-4 neon-border-violet">
+                    <div class="glass-card rounded-xl p-4 neon-border">
                         <div class="flex items-center gap-2 mb-3">
                             <div class="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center">
                                 <i class="fa-solid fa-check text-green-400 text-sm"></i>
@@ -151,18 +146,18 @@
 
                 <!-- Action Buttons -->
                 <div class="flex flex-col sm:flex-row gap-3">
-                    <a href="/" class="flex-1 px-6 py-3 bg-gradient-to-r from-neon-violet to-neon-blue text-white font-semibold text-sm rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-neon-violet/30 hover:scale-105 flex items-center justify-center gap-2">
+                    <a href="/" class="flex-1 px-6 py-3 bg-gradient-to-r from-neon-cyan to-neon-blue text-dark-navy font-semibold text-sm rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-neon-cyan/30 hover:scale-105 flex items-center justify-center gap-2">
                         <i class="fa-solid fa-house"></i>
                         Go to Homepage
                     </a>
-                    <a href="/#contact" class="flex-1 px-6 py-3 glass-card font-semibold text-sm rounded-lg border border-neon-violet/30 hover:border-neon-violet hover:bg-neon-violet/10 transition-all duration-300 flex items-center justify-center gap-2">
+                    <a href="/#contact" class="flex-1 px-6 py-3 glass-card font-semibold text-sm rounded-lg border border-neon-cyan/30 hover:border-neon-cyan hover:bg-neon-cyan/10 transition-all duration-300 flex items-center justify-center gap-2">
                         <i class="fa-solid fa-paper-plane"></i>
                         Contact Form
                     </a>
                 </div>
 
                 <!-- Quick Navigation -->
-                <div class="glass-card rounded-xl p-4 neon-border-violet">
+                <div class="glass-card rounded-xl p-4 neon-border">
                     <p class="text-xs text-gray-500 mb-3 uppercase tracking-wider font-semibold">Explore Instead</p>
                     <div class="grid grid-cols-4 gap-2">
                         <a href="/#about" class="p-3 rounded-lg bg-dark-navy/50 hover:bg-neon-cyan/10 transition-all text-center group">
@@ -177,9 +172,9 @@
                             <i class="fa-solid fa-briefcase text-neon-blue text-sm group-hover:scale-110 transition-transform block mb-1"></i>
                             <span class="text-xs text-gray-400 group-hover:text-white">Work</span>
                         </a>
-                        <a href="/#blog" class="p-3 rounded-lg bg-dark-navy/50 hover:bg-orange-500/10 transition-all text-center group">
-                            <i class="fa-solid fa-newspaper text-orange-400 text-sm group-hover:scale-110 transition-transform block mb-1"></i>
-                            <span class="text-xs text-gray-400 group-hover:text-white">Blog</span>
+                        <a href="/#contact" class="p-3 rounded-lg bg-dark-navy/50 hover:bg-neon-cyan/10 transition-all text-center group">
+                            <i class="fa-solid fa-envelope text-neon-cyan text-sm group-hover:scale-110 transition-transform block mb-1"></i>
+                            <span class="text-xs text-gray-400 group-hover:text-white">Contact</span>
                         </a>
                     </div>
                 </div>
@@ -195,8 +190,8 @@
                 <!-- Left: Brand & Links -->
                 <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
                     <a href="/" class="flex items-center gap-2 group">
-                        <div class="w-8 h-8 rounded-lg bg-gradient-to-r from-neon-cyan to-neon-blue flex items-center justify-center">
-                            <i class="fa-solid fa-code text-white text-sm"></i>
+                        <div class="w-8 h-8 rounded-lg overflow-hidden">
+                            <img src="/assets/og-image.png" alt="Siddharth Mahajan" class="w-full h-full object-cover">
                         </div>
                         <span class="text-sm font-semibold text-white group-hover:text-neon-cyan transition-colors">Siddharth Mahajan</span>
                     </a>
