@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Banner — Siddharth Mahajan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ── Page shell ─────────────────────────────────────────── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            padding: 2rem;
+        }
+
+        .page-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: #4b5563;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            position: fixed;
+            top: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+
+        /* ── Banner ─────────────────────────────────────────────── */
+        .banner {
+            width: 1584px;
+            height: 396px;
+            position: relative;
+            overflow: hidden;
+            background: #0a0e1a;
+            border-radius: 8px;
+            transform-origin: top center;
+        }
+
+        .banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(6,182,212,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(6,182,212,0.05) 1px, transparent 1px);
+            background-size: 48px 48px;
+            pointer-events: none;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            pointer-events: none;
+        }
+        .orb-1 { width: 460px; height: 460px; background: rgba(6,182,212,0.18);  top: -160px; left: -80px; }
+        .orb-2 { width: 380px; height: 380px; background: rgba(139,92,246,0.15); bottom: -160px; right: 200px; }
+        .orb-3 { width: 300px; height: 300px; background: rgba(59,130,246,0.10); top: -80px; right: -60px; }
+        .orb-4 { width: 200px; height: 200px; background: rgba(6,182,212,0.08);  bottom: -60px; left: 580px; }
+
+        .dot-grid {
+            position: absolute;
+            top: 20px;
+            right: 520px;
+            width: 120px;
+            height: 80px;
+            background-image: radial-gradient(circle, rgba(6,182,212,0.35) 1px, transparent 1px);
+            background-size: 12px 12px;
+            opacity: 0.4;
+        }
+
+        .accent-line {
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #06b6d4 30%, #8b5cf6 60%, #3b82f6, transparent);
+        }
+
+        .accent-line-bottom {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(6,182,212,0.3) 40%, rgba(139,92,246,0.3) 70%, transparent);
+        }
+
+        .banner-inner {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 72px;
+            gap: 0;
+        }
+
+        .left {
+            flex: 0 0 660px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 48px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 5px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(6,182,212,0.3);
+            background: rgba(6,182,212,0.08);
+            margin-bottom: 18px;
+            width: fit-content;
+        }
+        .badge-dot { width: 7px; height: 7px; border-radius: 50%; background: #06b6d4; }
+        .badge-text { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #06b6d4; letter-spacing: 0.1em; }
+
+        .name {
+            font-size: 58px;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.0;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+        .name span {
+            background: linear-gradient(90deg, #06b6d4, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #9ca3af;
+            margin-bottom: 20px;
+            letter-spacing: 0.01em;
+        }
+
+        .name-divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #06b6d4, transparent);
+            border-radius: 2px;
+            margin-bottom: 20px;
+        }
+
+        .chips { display: flex; gap: 10px; flex-wrap: wrap; }
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(26,31,53,0.7);
+            font-size: 11.5px;
+            color: #d1d5db;
+            font-family: 'JetBrains Mono', monospace;
+            letter-spacing: 0.02em;
+        }
+        .chip-dot { width: 5px; height: 5px; border-radius: 50%; }
+
+        .col-divider {
+            width: 1px;
+            height: 260px;
+            background: linear-gradient(180deg, transparent, rgba(6,182,212,0.3) 30%, rgba(139,92,246,0.3) 70%, transparent);
+            flex-shrink: 0;
+            margin: 0 52px;
+        }
+
+        .right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .terminal {
+            background: rgba(26,31,53,0.75);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            overflow: hidden;
+            backdrop-filter: blur(8px);
+        }
+
+        .term-header {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 9px 14px;
+            background: rgba(255,255,255,0.03);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .term-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .term-dot.r { background: rgba(239,68,68,0.7); }
+        .term-dot.y { background: rgba(245,158,11,0.7); }
+        .term-dot.g { background: rgba(34,197,94,0.7); }
+        .term-file { margin-left: 6px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #4b5563; }
+
+        .term-body {
+            padding: 14px 18px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            line-height: 1.9;
+        }
+        .t-kw  { color: #c084fc; }
+        .t-var { color: #06b6d4; }
+        .t-str { color: #4ade80; }
+        .t-key { color: #9ca3af; }
+        .t-pu  { color: #ffffff; }
+
+        .skill-strip { display: flex; gap: 8px; flex-wrap: wrap; }
+        .skill-tag {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10.5px;
+            border: 1px solid rgba(255,255,255,0.07);
+            background: rgba(255,255,255,0.04);
+            color: #9ca3af;
+        }
+        .skill-tag.cyan   { border-color: rgba(6,182,212,0.25);  color: #06b6d4;  background: rgba(6,182,212,0.07); }
+        .skill-tag.violet { border-color: rgba(139,92,246,0.25); color: #a78bfa;  background: rgba(139,92,246,0.07); }
+        .skill-tag.blue   { border-color: rgba(59,130,246,0.25); color: #60a5fa;  background: rgba(59,130,246,0.07); }
+
+        .handle {
+            position: absolute;
+            bottom: 18px;
+            right: 72px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10.5px;
+            color: #374151;
+            letter-spacing: 0.05em;
+        }
+        .handle span { color: #06b6d4; opacity: 0.7; }
+
+        .scale-wrapper { width: 100%; max-width: 1584px; overflow: hidden; }
+
+        /* ── Download button ─────────────────────────────────────── */
+        .download-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 10px 24px; border-radius: 8px;
+            border: 1px solid rgba(6,182,212,0.4); background: rgba(6,182,212,0.1);
+            color: #06b6d4; font-family: 'JetBrains Mono', monospace;
+            font-size: 12px; letter-spacing: 0.08em; cursor: pointer;
+            transition: all 0.2s ease; text-transform: uppercase;
+            position: fixed;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .download-btn:hover { background: rgba(6,182,212,0.2); border-color: rgba(6,182,212,0.7); box-shadow: 0 0 16px rgba(6,182,212,0.2); }
+        .download-btn:active { transform: translateX(-50%) scale(0.97); }
+        .download-btn.loading { opacity: 0.6; pointer-events: none; }
+        .download-btn svg { width: 14px; height: 14px; }
+    </style>
+</head>
+<body>
+
+<p class="page-label">LinkedIn Banner · 1584 × 396 px · Siddharth Mahajan</p>
+
+<div class="scale-wrapper">
+    <div class="banner" id="liveBanner">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+        <div class="dot-grid"></div>
+        <div class="accent-line"></div>
+        <div class="accent-line-bottom"></div>
+        <div class="banner-inner">
+            <div class="left">
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">Open to opportunities</span>
+                </div>
+                <h1 class="name">Siddharth<br><span>Mahajan</span></h1>
+                <div class="name-divider"></div>
+                <p class="title">Solution Architect &nbsp;·&nbsp; Cloud Engineer &nbsp;·&nbsp; Full-Stack Developer</p>
+                <div class="chips">
+                    <span class="chip"><span class="chip-dot" style="background:#06b6d4;"></span>3+ yrs experience</span>
+                    <span class="chip"><span class="chip-dot" style="background:#8b5cf6;"></span>India</span>
+                    <span class="chip"><span class="chip-dot" style="background:#3b82f6;"></span>siddharthmhjn.com</span>
+                </div>
+            </div>
+            <div class="col-divider"></div>
+            <div class="right">
+                <div class="terminal">
+                    <div class="term-header">
+                        <span class="term-dot r"></span>
+                        <span class="term-dot y"></span>
+                        <span class="term-dot g"></span>
+                        <span class="term-file">profile.ts</span>
+                    </div>
+                    <div class="term-body">
+                        <div><span class="t-kw">const</span> <span class="t-var">me</span> <span class="t-pu">= {</span></div>
+                        <div style="padding-left:1.4rem;"><span class="t-key">role:</span>     <span class="t-str">"Solution Architect &amp; Cloud Engineer"</span><span class="t-pu">,</span></div>
+                        <div style="padding-left:1.4rem;"><span class="t-key">stack:</span>    <span class="t-str">"Kubernetes · Spring Boot · Istio · Vue.js"</span><span class="t-pu">,</span></div>
+                        <div style="padding-left:1.4rem;"><span class="t-key">open:</span>     <span class="t-var">true</span><span class="t-pu">,</span></div>
+                        <div><span class="t-pu">};</span></div>
+                    </div>
+                </div>
+                <div class="skill-strip">
+                    <span class="skill-tag cyan">Kubernetes</span>
+                    <span class="skill-tag">Spring Boot</span>
+                    <span class="skill-tag violet">Istio</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag blue">Azure / AKS</span>
+                    <span class="skill-tag">Keycloak</span>
+                    <span class="skill-tag cyan">API Gateway</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag violet">Microservices</span>
+                    <span class="skill-tag blue">CI / CD</span>
+                </div>
+            </div>
+        </div>
+        <div class="handle"><span>❯</span> siddharthmhjn.com</div>
+    </div>
+</div>
+
+<button class="download-btn" id="downloadBtn" onclick="downloadBanner()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+    <span id="btnLabel">Download HD PNG (1584 × 396)</span>
+</button>
+
+<script>
+    // ── Preview scaling ───────────────────────────────────────────────────────
+    function scaleBanner() {
+        const banner  = document.querySelector('.banner');
+        const wrapper = document.querySelector('.scale-wrapper');
+        const scale   = Math.min(1, wrapper.clientWidth / 1584);
+        banner.style.transform    = `scale(${scale})`;
+        banner.style.marginBottom = ((396 * scale) - 396) + 'px';
+    }
+    scaleBanner();
+    window.addEventListener('resize', scaleBanner);
+
+    // ── Canvas-based download (pixel-perfect, no html2canvas limitations) ────
+    // All measurements taken directly from the CSS above.
+    async function downloadBanner() {
+        const btn   = document.getElementById('downloadBtn');
+        const label = document.getElementById('btnLabel');
+        btn.classList.add('loading');
+        label.textContent = 'Rendering…';
+
+        // Wait for fonts before we measure or draw text
+        await document.fonts.ready;
+
+        try {
+            const DPR = 2;              // 2× = HD output (3168 × 792)
+            const W = 1584, H = 396;
+
+            const cv  = document.createElement('canvas');
+            cv.width  = W * DPR;
+            cv.height = H * DPR;
+            const c   = cv.getContext('2d');
+            c.scale(DPR, DPR);          // draw in CSS px throughout
+
+            // ── helpers ──────────────────────────────────────────────────────
+            function rr(x, y, w, h, r) {
+                c.beginPath();
+                c.moveTo(x + r, y);
+                c.arcTo(x+w, y,   x+w, y+h, r);
+                c.arcTo(x+w, y+h, x,   y+h, r);
+                c.arcTo(x,   y+h, x,   y,   r);
+                c.arcTo(x,   y,   x+w, y,   r);
+                c.closePath();
+            }
+
+            function lg(x0, y0, x1, y1, stops) {
+                const g = c.createLinearGradient(x0, y0, x1, y1);
+                stops.forEach(([p, col]) => g.addColorStop(p, col));
+                return g;
+            }
+
+            // ── 1. Background + clip ─────────────────────────────────────────
+            rr(0, 0, W, H, 8);
+            c.fillStyle = '#0a0e1a';
+            c.fill();
+            c.save(); c.clip();
+
+            // ── 2. Grid  48px cyan lines ─────────────────────────────────────
+            c.strokeStyle = 'rgba(6,182,212,0.05)';
+            c.lineWidth = 1;
+            for (let x = 0; x <= W; x += 48) { c.beginPath(); c.moveTo(x,0); c.lineTo(x,H); c.stroke(); }
+            for (let y = 0; y <= H; y += 48) { c.beginPath(); c.moveTo(0,y); c.lineTo(W,y); c.stroke(); }
+
+            // ── 3. Orbs (blur simulation via radial gradient) ────────────────
+            // CSS: position absolute, border-radius 50%, filter:blur(80px)
+            // We model each as a radial gradient: solid colour to the circle
+            // edge, then fades to transparent over a blur-radius of 80px.
+            function orb(cx, cy, r, R, G, B, alpha) {
+                const blurSpread = 80;
+                const outer = r + blurSpread;
+                const g = c.createRadialGradient(cx, cy, 0, cx, cy, outer);
+                g.addColorStop(0,          `rgba(${R},${G},${B},${alpha})`);
+                g.addColorStop(r / outer,  `rgba(${R},${G},${B},${alpha})`);
+                g.addColorStop(1,          `rgba(${R},${G},${B},0)`);
+                c.fillStyle = g;
+                c.beginPath(); c.arc(cx, cy, outer, 0, Math.PI*2); c.fill();
+            }
+            // orb-1: 460×460  top:-160  left:-80   → centre (150, 70)   r=230
+            orb(150,          70,          230, 6,   182, 212, 0.18);
+            // orb-2: 380×380  bottom:-160 right:200 → centre (1194, 366) r=190
+            orb(W-200-190,    H+160-190,   190, 139, 92,  246, 0.15);
+            // orb-3: 300×300  top:-80    right:-60  → centre (1494, 70)  r=150
+            orb(W+60-150,     -80+150,     150, 59,  130, 246, 0.10);
+            // orb-4: 200×200  bottom:-60 left:580   → centre (680, 356)  r=100
+            orb(580+100,      H+60-100,    100, 6,   182, 212, 0.08);
+
+            // ── 4. Dot grid  top:20 right:520 120×80 12px grid opacity:0.4 ──
+            c.save(); c.globalAlpha = 0.4;
+            const dgX = W - 520 - 120, dgY = 20;
+            for (let row = 0; row < 7; row++)
+                for (let col = 0; col < 11; col++) {
+                    c.beginPath();
+                    c.arc(dgX + col*12 + 1, dgY + row*12 + 1, 1, 0, Math.PI*2);
+                    c.fillStyle = 'rgba(6,182,212,0.35)'; c.fill();
+                }
+            c.restore();
+
+            // ── 5. Top accent line ───────────────────────────────────────────
+            c.fillStyle = lg(0,0,W,0,[
+                [0,'rgba(0,0,0,0)'],[0.30,'#06b6d4'],[0.60,'#8b5cf6'],[0.85,'#3b82f6'],[1,'rgba(0,0,0,0)']
+            ]);
+            c.fillRect(0, 0, W, 3);
+
+            // ── 6. Bottom accent line ────────────────────────────────────────
+            c.fillStyle = lg(0,0,W,0,[
+                [0,'rgba(0,0,0,0)'],[0.40,'rgba(6,182,212,0.3)'],[0.70,'rgba(139,92,246,0.3)'],[1,'rgba(0,0,0,0)']
+            ]);
+            c.fillRect(0, H-2, W, 2);
+
+            // ═════════════════════════════════════════════════════════════════
+            // LEFT COLUMN
+            // flex: 0 0 660px  justify-content: center  padding-right: 48px
+            // banner-inner padding: 0 72px → LX = 72
+            // ═════════════════════════════════════════════════════════════════
+            const LX = 72;
+
+            // Compute exact stack height so we can vertically centre it.
+            // We measure badge text width now that fonts are loaded.
+            c.font = '500 11px "JetBrains Mono",monospace';
+            const badgeTW = c.measureText('Open to opportunities').width;
+            // badge: padding 5px 14px, dot 7px, gap 7px → h = 5+ceil(11*1.2)+5 ≈ 25
+            const BH = 25;
+            // name lines: font 58px line-height 1.0 → 58px each × 2 lines
+            // name margin-bottom: 6px
+            // divider: 3px + margin-bottom 20px
+            // title: font 16px line-height normal ≈ 21px + margin-bottom 20px
+            // chips: font 11.5px padding 5px 12px → h ≈ 26px
+            const STACK = BH+18 + 58+58+6 + 3+20 + 21+20 + 26; // = 258 + adjustments
+            let ly = (H - STACK) / 2;
+
+            // ── Badge ────────────────────────────────────────────────────────
+            const bW = 14 + 7 + 7 + badgeTW + 14;
+            rr(LX, ly, bW, BH, BH/2);
+            c.fillStyle = 'rgba(6,182,212,0.08)'; c.fill();
+            c.strokeStyle = 'rgba(6,182,212,0.3)'; c.lineWidth = 1; c.stroke();
+            c.beginPath(); c.arc(LX+14+3.5, ly+BH/2, 3.5, 0, Math.PI*2);
+            c.fillStyle = '#06b6d4'; c.fill();
+            c.font = '500 11px "JetBrains Mono",monospace';
+            c.fillStyle = '#06b6d4'; c.textBaseline = 'middle';
+            c.fillText('Open to opportunities', LX+14+7+7, ly+BH/2);
+            ly += BH + 18;
+
+            // ── Name line 1: "Siddharth" white ───────────────────────────────
+            c.font = '800 58px "Inter",sans-serif';
+            c.fillStyle = '#ffffff';
+            c.textBaseline = 'top';
+            c.fillText('Siddharth', LX, ly);
+            ly += 58;
+
+            // ── Name line 2: "Mahajan" cyan→blue→violet gradient ─────────────
+            const mW = c.measureText('Mahajan').width;
+            const mg = c.createLinearGradient(LX, 0, LX+mW, 0);
+            mg.addColorStop(0,   '#06b6d4');
+            mg.addColorStop(0.5, '#3b82f6');
+            mg.addColorStop(1,   '#8b5cf6');
+            c.fillStyle = mg;
+            c.fillText('Mahajan', LX, ly);
+            ly += 58 + 6;
+
+            // ── Name divider: 60×3px gradient, margin-bottom 20px ────────────
+            c.fillStyle = lg(LX,0,LX+60,0,[[0,'#06b6d4'],[1,'rgba(0,0,0,0)']]);
+            rr(LX, ly, 60, 3, 2); c.fill();
+            ly += 3 + 20;
+
+            // ── Title ────────────────────────────────────────────────────────
+            c.font = '500 16px "Inter",sans-serif';
+            c.fillStyle = '#9ca3af';
+            c.textBaseline = 'top';
+            c.fillText('Solution Architect  ·  Cloud Engineer  ·  Full-Stack Developer', LX, ly);
+            ly += 21 + 20;
+
+            // ── Chips  padding:5px 12px  gap:6px internal  gap:10px between ─
+            c.font = '400 11.5px "JetBrains Mono",monospace';
+            const chipData = [
+                ['3+ yrs experience','#06b6d4'],
+                ['India','#8b5cf6'],
+                ['siddharthmhjn.com','#3b82f6'],
+            ];
+            let cx2 = LX;
+            chipData.forEach(([txt, dotCol]) => {
+                const tw  = c.measureText(txt).width;
+                const cW  = 12 + 5 + 6 + tw + 12;   // padL + dot + gap + text + padR
+                const cH  = 26;
+                rr(cx2, ly, cW, cH, 6);
+                c.fillStyle = 'rgba(26,31,53,0.7)'; c.fill();
+                c.strokeStyle = 'rgba(255,255,255,0.08)'; c.lineWidth = 1; c.stroke();
+                c.beginPath(); c.arc(cx2+12+2.5, ly+cH/2, 2.5, 0, Math.PI*2);
+                c.fillStyle = dotCol; c.fill();
+                c.fillStyle = '#d1d5db'; c.textBaseline = 'middle';
+                c.fillText(txt, cx2+12+5+6, ly+cH/2);
+                cx2 += cW + 10;
+            });
+
+            // ═════════════════════════════════════════════════════════════════
+            // COLUMN DIVIDER  width:1  height:260  margin:0 52px
+            // ═════════════════════════════════════════════════════════════════
+            const CDX = LX + 660 + 52;   // 784
+            c.fillStyle = lg(0,(H-260)/2,0,(H+260)/2,[
+                [0,'rgba(0,0,0,0)'],[0.30,'rgba(6,182,212,0.3)'],[0.70,'rgba(139,92,246,0.3)'],[1,'rgba(0,0,0,0)']
+            ]);
+            c.fillRect(CDX, (H-260)/2, 1, 260);
+
+            // ═════════════════════════════════════════════════════════════════
+            // RIGHT COLUMN  flex:1  justify-content:center  gap:20px
+            // RX = CDX + 1 + 52 = 837   RW = 1584-837-72 = 675
+            // ═════════════════════════════════════════════════════════════════
+            const RX = CDX + 1 + 52;
+            const RW = W - RX - 72;
+
+            // Pre-measure skill tags and wrap into rows
+            c.font = '400 10.5px "JetBrains Mono",monospace';
+            const skillDefs = [
+                {t:'Kubernetes',s:'cyan'},{t:'Spring Boot',s:'plain'},
+                {t:'Istio',s:'violet'},{t:'Docker',s:'plain'},
+                {t:'Azure / AKS',s:'blue'},{t:'Keycloak',s:'plain'},
+                {t:'API Gateway',s:'cyan'},{t:'Java',s:'plain'},
+                {t:'Microservices',s:'violet'},{t:'CI / CD',s:'blue'},
+            ];
+            const SK_PAD=10, SK_GAP=8, SK_H=26, SK_ROW_GAP=6;
+            skillDefs.forEach(sk => { sk.w = SK_PAD + c.measureText(sk.t).width + SK_PAD; });
+
+            const rows = [[]]; let rowUsed = 0;
+            skillDefs.forEach(sk => {
+                const needed = rowUsed === 0 ? sk.w : rowUsed + SK_GAP + sk.w;
+                if (needed > RW && rows[rows.length-1].length > 0) { rows.push([]); rowUsed = 0; }
+                rows[rows.length-1].push(sk);
+                rowUsed = rowUsed === 0 ? sk.w : rowUsed + SK_GAP + sk.w;
+            });
+            const SKILLS_H = rows.length * SK_H + (rows.length-1) * SK_ROW_GAP;
+
+            // Terminal size  header:9+10+9=28  border:1  body:14+5*22.8+14≈142
+            const T_HDR = 28, T_LINE = 12*1.9;
+            const T_BODY = 14 + T_LINE*5 + 14;
+            const TH_px = T_HDR + 1 + T_BODY;
+            const RIGHT_STACK = TH_px + 20 + SKILLS_H;
+            const TY = (H - RIGHT_STACK) / 2;
+
+            // Terminal box
+            rr(RX, TY, RW, TH_px, 12);
+            c.fillStyle = 'rgba(26,31,53,0.75)'; c.fill();
+            c.strokeStyle = 'rgba(255,255,255,0.08)'; c.lineWidth = 1; c.stroke();
+
+            // Header bg (clip to rounded top)
+            c.save();
+            rr(RX, TY, RW, T_HDR, 12); c.clip();
+            c.fillStyle = 'rgba(255,255,255,0.03)';
+            c.fillRect(RX, TY, RW, T_HDR);
+            c.restore();
+
+            // Header border
+            c.fillStyle = 'rgba(255,255,255,0.06)';
+            c.fillRect(RX, TY+T_HDR, RW, 1);
+
+            // Traffic lights  padding:9px 14px  gap:6px  dot 10px dia
+            const dotCY = TY + T_HDR/2, dotR2 = 5;
+            const d0 = RX + 14 + dotR2;
+            [['rgba(239,68,68,0.7)',0],['rgba(245,158,11,0.7)',16],['rgba(34,197,94,0.7)',32]].forEach(([col,ox])=>{
+                c.beginPath(); c.arc(d0+ox, dotCY, dotR2, 0, Math.PI*2);
+                c.fillStyle = col; c.fill();
+            });
+
+            // "profile.ts"  margin-left:6px after last dot
+            c.font = '400 10px "JetBrains Mono",monospace';
+            c.fillStyle = '#4b5563'; c.textBaseline = 'middle';
+            c.fillText('profile.ts', d0+32+dotR2+6, dotCY);
+
+            // Code lines — centred vertically inside body
+            const CODE_X = RX + 18;
+            const IND    = CODE_X + 22.4; // 1.4rem at 16px root
+            const bodyTop = TY + T_HDR + 1;
+            const bodyH   = TH_px - T_HDR - 1;
+            let cly = bodyTop + (bodyH - T_LINE*5) / 2;
+
+            c.textBaseline = 'top';
+            function span(parts, x, y) {
+                c.font = '400 12px "JetBrains Mono",monospace';
+                parts.forEach(([t,col])=>{ c.fillStyle=col; c.fillText(t,x,y); x+=c.measureText(t).width; });
+            }
+            span([['const ','#c084fc'],['me ','#06b6d4'],['= {','#ffffff']], CODE_X, cly); cly+=T_LINE;
+            span([['role:','#9ca3af'],['     ','#9ca3af'],['"Solution Architect & Cloud Engineer"','#4ade80'],[',','#ffffff']], IND, cly); cly+=T_LINE;
+            span([['stack:','#9ca3af'],['    ','#9ca3af'],['"Kubernetes · Spring Boot · Istio · Vue.js"','#4ade80'],[',','#ffffff']], IND, cly); cly+=T_LINE;
+            span([['open:','#9ca3af'],['     ','#9ca3af'],['true','#06b6d4'],[',','#ffffff']], IND, cly); cly+=T_LINE;
+            span([['}; ','#ffffff']], CODE_X, cly);
+
+            // Skill tags — wrapped rows
+            const sStyles = {
+                cyan:  ['rgba(6,182,212,0.25)','#06b6d4','rgba(6,182,212,0.07)'],
+                violet:['rgba(139,92,246,0.25)','#a78bfa','rgba(139,92,246,0.07)'],
+                blue:  ['rgba(59,130,246,0.25)','#60a5fa','rgba(59,130,246,0.07)'],
+                plain: ['rgba(255,255,255,0.07)','#9ca3af','rgba(255,255,255,0.04)'],
+            };
+            c.font = '400 10.5px "JetBrains Mono",monospace';
+            let sRowY = TY + TH_px + 20;
+            rows.forEach(row => {
+                let sx = RX;
+                row.forEach(sk => {
+                    const [bdr,col,bg] = sStyles[sk.s];
+                    rr(sx, sRowY, sk.w, SK_H, 5);
+                    c.fillStyle = bg; c.fill();
+                    c.strokeStyle = bdr; c.lineWidth = 1; c.stroke();
+                    c.fillStyle = col; c.textBaseline = 'middle';
+                    c.fillText(sk.t, sx+SK_PAD, sRowY+SK_H/2);
+                    sx += sk.w + SK_GAP;
+                });
+                sRowY += SK_H + SK_ROW_GAP;
+            });
+
+            // ── Website handle  bottom:18 right:72 gap:6px ───────────────────
+            c.font = '400 10.5px "JetBrains Mono",monospace';
+            c.textBaseline = 'alphabetic';
+            const arrowW  = c.measureText('❯').width;
+            const domainW = c.measureText('siddharthmhjn.com').width;
+            const hx = W - 72 - arrowW - 6 - domainW;
+            c.fillStyle = 'rgba(6,182,212,0.7)';
+            c.fillText('❯', hx, H-18);
+            c.fillStyle = '#374151';
+            c.fillText('siddharthmhjn.com', hx+arrowW+6, H-18);
+
+            c.restore(); // end clip
+
+            // ── Download ─────────────────────────────────────────────────────
+            const link = document.createElement('a');
+            link.download = 'linkedin-banner-siddharth-mahajan.png';
+            link.href = cv.toDataURL('image/png', 1.0);
+            link.click();
+
+            label.textContent = '✓ Downloaded!';
+            setTimeout(() => { label.textContent = 'Download HD PNG (1584 × 396)'; btn.classList.remove('loading'); }, 2000);
+
+        } catch(err) {
+            console.error(err);
+            label.textContent = 'Error — try again';
+            setTimeout(() => { label.textContent = 'Download HD PNG (1584 × 396)'; btn.classList.remove('loading'); }, 2000);
+        }
+    }
+</script>
+<script src="/guard.js" defer></script>
+</body>
+</html>
